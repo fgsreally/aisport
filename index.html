@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - MediaPipe - Pose</title>
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.2/landmark_grid.css" crossorigin="anonymous"> -->
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <!-- <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous"> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.1635988162/pose.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <body>
+    <style>
+      .square-box {
+        width: 33%;
+        height: 0;
+        padding-top: 33%;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+
+      .landmark-grid-container {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #99999999;
+      }
+    </style>
+    <div class="container">
+      <div style="display:flex;justify-content:center;align-items:center"> <button class="start">摄像头开启</button>
+        <button class="stop">摄像头停止</button>
+        <button class="start test">视频开启</button>
+        <button class="stop test">视频停止</button>
+        <button class='fullScreen'>摄像头全屏</button>
+        <button class='fullScreen test'>视频全屏</button>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:center">
+        <button id='situp'>仰卧起坐</button>
+        <button id='pullup'>引体向上</button>
+      </div>
+      <div id='type'>仰卧起坐</div>
+
+      <div class='counter'></div>
+      <div style="display:flex;justify-content:center;align-items:center">
+        <video class="input_video video1" width='600' height='300'> </video>
+        <video class="input_video test" width='1000' height='600' src='./12.mp4'></video>
+      </div>
+
+      <img id='testImg' src="" alt="">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div class="message">
+          Loading
+        </div>
+      </div>
+
+
+      <!-- partial -->
+      <script src="./utils.js"></script>
+      <script src="./exercise-type.js"></script>
+      <script src="./script.js"></script>
+
+  </body>
+
+</html>
