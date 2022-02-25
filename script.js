@@ -15,7 +15,7 @@ const startele2 = document.getElementsByClassName("start")[1];
 const stopele2 = document.getElementsByClassName("stop")[1];
 const canvasElement = document.getElementsByClassName("output_canvas")[0];
 const controlsElement = document.getElementsByClassName("control-panel")[0];
-
+const divtest=document.getElementsByClassName("control-panel")[0];
 const fullScreen = document.getElementsByClassName("fullScreen")[0];
 const fullScreen2 = document.getElementsByClassName("fullScreen")[1];
 const situp = document.getElementById("situp");
@@ -96,13 +96,13 @@ var state = true;
 var ret;
 var timer;
 let errMsg = "";
-function onResults(results) {
+  function onResults(results) {
   // Hide the spinner.
 
   ret = sportAi(results.poseLandmarks, sportType, counter, state); //ret.msg即是错误信息
   if (ret.msg && errMsg !== ret.msg) {
     errMsg = ret.msg
-    counterblock.innerHTML = ret.msg; //错误信息在这个位置
+   
   }
   if (counter !== ret.counter) {
     counterblock.innerHTML = counter + 1;
@@ -176,7 +176,8 @@ function onFrame(pose, videoElement) {
     });
     if (!videoElement.paused) {
       onFrame(pose, videoElement);
-    }
+    }else{
+     counterblock.innerHTML = errMsg; //错误信息在这个位置}
   });
 }
 
