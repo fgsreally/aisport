@@ -1,0 +1,11 @@
+更改为script.js,exercises-type.js 两个文件
+
+注意：
+exercises-type.js:(137行)
+1:更改高度参数
+2:修改错误信息，
+
+script.js(103行开始)
+1:更改页面行为
+
+此外，原有的3.MP4已不适合于测试
